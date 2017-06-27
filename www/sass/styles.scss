@@ -1,0 +1,239 @@
+//Variables
+
+$spotify-color: #1ED760;
+$dark-grey: #424242;
+$not-white: #fafafa;
+
+
+/*************
+Spotify Login
+*************/
+.spotify{
+    background-color: $spotify-color;
+}
+
+/*************
+Enter City
+*************/
+.city-name{
+    width: 25%;
+}
+
+
+
+
+
+
+
+/***************
+NAV BAR
+***************/
+
+.shows-navigation{
+    // display: flex;
+    // flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.show-nav-links{
+    display: flex;
+    li{
+        padding: 1em 2em;
+        a{
+            text-decoration: none;
+            font-size: 1.25em;
+            color: white;
+        }
+    }
+}
+.logo{
+    padding: 1em 2em;
+    font-size: 2em;
+    color: white;
+}
+
+.input-field{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+#artist-search{
+    width: 500px;
+    color: white;
+}
+
+/*****************
+MEDIA QUERIES
+******************/
+
+@media screen
+  and (min-device-width: 1200px)
+  and (max-device-width: 1600px)  {
+    .card-top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 385px;
+    // position: relative;
+    overflow:hidden;
+    }
+    .card-content{
+        min-height: 216px;
+    }
+    .card{
+        height: 624px !important;
+    }
+    .shows-navigation{
+        display: flex;
+    }
+}
+
+@media screen
+  and (min-device-width: 990px)
+  and (max-device-width: 1200px)  {
+        .card-top{
+        height: 286px;
+        // position: relative;
+    }
+    .shows-navigation{
+        display: flex;
+    }
+
+}
+
+@media screen
+  and (min-device-width: 600px)
+  and (max-device-width: 990px)  {
+        .card-top{
+        height: 540px;
+        // position: relative;
+    }
+
+}
+
+@media screen and (max-device-width 600px){
+
+}
+
+/*****************
+CARD FORMATING
+******************/
+
+.cards-list{
+    max-width: 85%;
+}
+
+
+
+.show-card{
+    border-top: 1px solid rgba(160, 160, 160, 0.2);
+    border-radius: 0 0 2px 2px;
+    box-shadow: 2px 2px 1px #888888;
+}
+
+.card-top{
+    position: relative;
+}
+
+.artist-image{
+    // position: absolute;
+    // top: 0;
+    // right: 0;
+    width: 100%;
+    // display: inline-block !important;
+    vertical-align: middle !important;
+}
+
+.show-content{
+  background-color: $dark-grey;
+  color: $not-white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+
+  display: flex !important;
+  // flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+.card-top:hover .show-content{
+  opacity: .9;
+}
+
+.show-title{
+    font-size: 3em;
+    font-weight: 100;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+
+.show-date{
+    font-size: 2em;
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+.show-time{
+    font-size: 1.25em;
+    font-weight:500;
+}
+
+.show-venue{
+    font-size: 3em;
+    font-weight: 100;
+    margin-bottom: 10px;
+    margin-top: 10px
+}
+
+.card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.links{
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-around;
+    a {
+        text-decoration: none;
+        color: $dark-grey;
+        font-size: 1.25em;
+        font-weight: 100;
+    }
+}
+
+.add-btn{
+    text-decoration: none;
+    color: $dark-grey;
+    font-size: 1.25em;
+    font-weight: 100;
+    margin-top: 0.75em;
+}
+
+/*************
+Dynamic Font
+*************/
+.above18{
+    font-size: 2em;
+}
+
+
+
+
+
+
+
+

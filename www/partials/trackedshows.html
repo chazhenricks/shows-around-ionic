@@ -1,0 +1,30 @@
+<div class="row cards-list">
+    <div ng-repeat="shows in localShows">
+        <div class="col s12 m4">
+            <div class="card grey lighten-3">
+                <div class="card-top">
+                    <img class="artist-image" src="{{shows.picture}}">
+                    <div class="show-content">
+                        <p class="show-venue center"> {{shows.venue}} </p>
+                        <p class="show-date center">{{shows.date}}</p>
+                        <p class="show-time center">{{shows.time}}</p>
+                    </div>
+                </div>
+                <!-- end card image -->
+                <div class="card-content">
+                    <p class="show-title" ng-class="{'above18':shows.name.length > 17}">{{shows.name}}</p>
+                    <div class="links">
+                        <p class="show-tickets center"><a class="waves-effect waves-transparent btn-flat" href="{{shows.tickets}}">Tickets</a></p>
+                        <p class="show-directions center"><a class="waves-effect waves-transparent btn-flat" href="https://www.google.com/maps/dir/Current+Location/{{shows.lat}},{{shows.long}}">Directions</a></p>
+                    </div>
+                    <a class="waves-effect waves-transparent btn-flat add-btn center-align" ng-click="removeShow(shows.id)">Remove</a>
+                </div>
+                <!-- end card content -->
+            </div>
+            <!-- end card -->
+        </div>
+        <!-- end col -->
+    </div>
+    <!-- end ng-repeat -->
+</div>
+<!-- end row center -->

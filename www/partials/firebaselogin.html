@@ -1,0 +1,36 @@
+<div class="container center">
+    <section>
+        <h3>Welcome To Shows Around</h3>
+        <div>
+            <input type="email" autofocus="true" placeholder="Email" ng-model="auth.email">
+        </div>
+        <div>
+            <input type="password" placeholder="Password" ng-model="auth.password">
+        </div>
+        <div>
+            <button ng-click="login()" class="btn waves-effect waves-light red">Login</button>
+            <p>OR</p>
+            <div class="col">
+                <a class="btn waves-effect waves-light blue" data-target='registerModal' modal>Register</a>
+            </div> <!-- end col -->
+        </div>
+    </section>
+</div> <!-- end container -->
+
+
+
+<!-- Modal Structure -->
+<div id="registerModal" class="modal">
+    <div class="modal-content">
+        <h4>Register New User</h4>
+        <input type="text" autofocus="true" placeholder="First Name" ng-model="auth.firstName">
+        <input type="text" autofocus="true" placeholder="Last Name" ng-model="auth.lastName">
+        <input type="email" autofocus="true" placeholder="Email" ng-model="auth.email">
+        <input type="password" autofocus="true" placeholder="Password" ng-model="auth.password">
+        <button ng-click="registerUser()" class="btn waves-effect waves-light red">Register</button>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+    </div>
+</div>
+<!-- End Modal -->
