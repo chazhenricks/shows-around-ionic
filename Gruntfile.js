@@ -9,7 +9,7 @@ module.exports = function(grunt) {
         globalstrict: true,
         globals: {"angular": true, "app": true}
       },
-      files: ['../app/**/*.js']
+      files: ['shows-around-ionic/www/app/**/*.js']
     },
     sass: {
       dist: {

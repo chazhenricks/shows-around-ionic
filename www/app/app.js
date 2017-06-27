@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 "use strict";
 
-var app = angular.module("ShowsAround", ["ngRoute", "LocalStorageModule", "spotify", "ui.materialize"]);
+var app = angular.module("ShowsAround", ["ngRoute", "LocalStorageModule", "spotify", "ui.materialize", "ionic"]);
 
 
 //initializes firebase

@@ -19,9 +19,7 @@
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
-
 </head>
-
 <!-- <body ng-app="starter">
     <ion-pane>
         <ion-header-bar class="bar-stable">
@@ -32,90 +30,60 @@
     </ion-pane> -->
 
 <body class="grey lighten-5">
-
-
-<!-- NAV BAR -->
-<div ng-include="'partials/navbar.html'"></div>
-
-
-<!-- Container Div - for materialize grid layouts -->
-<div class="container-fluid">
-    <!-- NG VIEW -->
-    <!-- This will display the dynamically changing html pages  -->
-    <div ng-view></div>
-</div>
-
-
-
-<!-- TOAST -->
-<!-- This will add drop down notifications when a user has added a show to their profile -->
-<!-- <toast></toast> -->
+    <!-- NAV BAR -->
+    <div ng-include="'partials/navbar.html'"></div>
+    <!-- Container Div - for materialize grid layouts -->
+    <div class="container-fluid">
+        <!-- NG VIEW -->
+        <!-- This will display the dynamically changing html pages  -->
+        <div ng-view></div>
+    </div>
+    <!-- TOAST -->
+    <!-- This will add drop down notifications when a user has added a show to their profile -->
+    <!-- <toast></toast> -->
 
 
 
 
 
+    <!-- ANGULAR -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="app/jquery-initalizers.js"></script>
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.min.js"></script>
+    <script src="app/angular-spotify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-local-storage/0.6.0/angular-local-storage.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.2/angular-materialize.js"></script>
 
+    <!-- FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
 
-<!-- ANGULAR -->
-<script type="text/javascript" src="../node_modules/jquery/dist/jquery.js"></script>
-<script src="app/jquery-initalizers.js"></script>
-<!-- ionic/angularjs js -->
-<script src="lib/ionic/js/ionic.bundle.js"></script>
-<!-- cordova script (this will be a 404 during development) -->
-<script src="cordova.js"></script>
-<script src="../node_modules/angular-route/angular-route.js"></script>
-<script src="../node_modules/angular-spotify/dist/angular-spotify.min.js"></script>
-<script src="../node_modules/angular-local-storage/dist/angular-local-storage.js"></script>
-<script src="../node_modules/angular-materialize/src/angular-materialize.js"></script>
+    <!-- APP.JS -->
+    <script type="text/javascript" src="app/app.js"></script>
 
+    <!-- VALUES -->
+    <script type="text/javascript" src="app/values/fb-creds.js"></script>
+    <script type="text/javascript" src="app/values/spotify-creds.js"></script>
 
-<!-- FIREBASE -->
-<script type="text/javascript" src="../node_modules/firebase/firebase.js"></script>
+    <!-- MATERIALIZE-CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
 
-<!-- APP.JS -->
-<script type="text/javascript" src="app/app.js"></script>
+    <!-- CONTROLLERS -->
+    <script type="text/javascript" src="app/controllers/AuthCtrl.js"></script>
+    <script type="text/javascript" src="app/controllers/ShowsListCtrl.js"></script>
+    <script type="text/javascript" src="app/controllers/TrackedShowsCtrl.js"></script>
+    <script type="text/javascript" src="app/controllers/NavCtrl.js"></script>
 
-<!-- VALUES -->
-<script type="text/javascript" src="app/values/fb-creds.js"></script>
-<script type="text/javascript" src="app/values/spotify-creds.js"></script>
-
-
-<!-- MATERIALIZE-CSS -->
-<script type="text/javascript" src="../node_modules/materialize-css/dist/js/materialize.js"></script>
-
-
-
-<!-- CONTROLLERS -->
-<script type="text/javascript" src="app/controllers/AuthCtrl.js"></script>
-<script type="text/javascript" src="app/controllers/ShowsListCtrl.js"></script>
-<script type="text/javascript" src="app/controllers/TrackedShowsCtrl.js"></script>
-<script type="text/javascript" src="app/controllers/NavCtrl.js"></script>
-
-<!-- FACTORIES -->
-<script type="text/javascript" src="app/factories/AuthFactory.js"></script>
-<script type="text/javascript" src="app/factories/DataFactory.js"></script>
-<script type="text/javascript" src="app/factories/LocationFactory.js"></script>
-<script type="text/javascript" src="app/factories/FilterFactory.js"></script>
-
-
-
-
-
-
+    <!-- FACTORIES -->
+    <script type="text/javascript" src="app/factories/AuthFactory.js"></script>
+    <script type="text/javascript" src="app/factories/DataFactory.js"></script>
+    <script type="text/javascript" src="app/factories/LocationFactory.js"></script>
+    <script type="text/javascript" src="app/factories/FilterFactory.js"></script>
 
 
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
