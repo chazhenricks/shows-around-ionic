@@ -1,143 +1,151 @@
 //Variables
-
 $spotify-color: #1ED760;
 $dark-grey: #424242;
 $not-white: #fafafa;
 
-
 /*************
 Spotify Login
 *************/
-.spotify{
+
+.spotify {
     background-color: $spotify-color;
 }
+
 
 /*************
 Enter City
 *************/
-.city-name{
+
+.city-name {
     width: 25%;
 }
-
-
-
-
-
 
 
 /***************
 NAV BAR
 ***************/
 
-.shows-navigation{
-    // display: flex;
-    // flex-direction: column;
+.shows-navigation {
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    // height: 200px;
 }
 
-.show-nav-links{
+.show-nav-links {
     display: flex;
-    li{
+    li {
         padding: 1em 2em;
-        a{
+        a {
             text-decoration: none;
             font-size: 1.25em;
             color: white;
         }
     }
 }
-.logo{
-    padding: 1em 2em;
+
+.logo {
+    padding-top: 0.25em;
     font-size: 2em;
     color: white;
 }
 
-.input-field{
+.input-field {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
-#artist-search{
+
+#artist-search {
     width: 500px;
     color: white;
 }
+
 
 /*****************
 MEDIA QUERIES
 ******************/
 
-@media screen
-  and (min-device-width: 1200px)
-  and (max-device-width: 1600px)  {
-    .card-top{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 385px;
-    // position: relative;
-    overflow:hidden;
-    }
-    .card-content{
-        min-height: 216px;
-    }
-    .card{
-        height: 624px !important;
-    }
-    .shows-navigation{
-        display: flex;
-    }
+.cards-list{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px;
+    justify-content: center;
 }
 
-@media screen
-  and (min-device-width: 990px)
-  and (max-device-width: 1200px)  {
-        .card-top{
-        height: 286px;
-        // position: relative;
-    }
-    .shows-navigation{
-        display: flex;
+
+@media screen and (min-device-width: 990px){
+
+    .cards-list{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 10px;
+        justify-content: center;
+        padding: 20px;
     }
 
 }
 
-@media screen
-  and (min-device-width: 600px)
-  and (max-device-width: 990px)  {
-        .card-top{
-        height: 540px;
-        // position: relative;
-    }
 
-}
+// @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
+//     .card-top {
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         height: 385px;
+//         // position: relative;
+//         overflow: hidden;
+//     }
+//     .card-content {
+//         min-height: 216px;
+//     }
+//     .card {
+//         height: 624px !important;
+//     }
+//     .shows-navigation {
+//         display: flex;
+//     }
+// }
 
-@media screen and (max-device-width 600px){
+// @media screen and (min-device-width: 990px) and (max-device-width: 1200px) {
+//     .card-top {
+//         height: 286px;
+//         // position: relative;
+//     }
+//     .shows-navigation {
+//         display: flex;
+//     }
+// }
 
-}
+// @media screen and (min-device-width: 600px) and (max-device-width: 990px) {
+//     .card-top {
+//         height: 540px;
+//         // position: relative;
+//     }
+// }
+
 
 /*****************
 CARD FORMATING
 ******************/
 
-.cards-list{
+.cards-list {
     max-width: 85%;
 }
 
-
-
-.show-card{
+.show-card {
     border-top: 1px solid rgba(160, 160, 160, 0.2);
     border-radius: 0 0 2px 2px;
     box-shadow: 2px 2px 1px #888888;
 }
 
-.card-top{
+.card-top {
     position: relative;
 }
 
-.artist-image{
+.artist-image {
     // position: absolute;
     // top: 0;
     // right: 0;
@@ -146,64 +154,67 @@ CARD FORMATING
     vertical-align: middle !important;
 }
 
-.show-content{
-  background-color: $dark-grey;
-  color: $not-white;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-
-  display: flex !important;
-  // flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-
+.show-content {
+    background-color: $dark-grey;
+    color: $not-white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    display: flex !important;
+    // flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.card-top:hover .show-content{
-  opacity: .9;
+.card-top:hover .show-content {
+    opacity: .9;
 }
 
-.show-title{
+.show-title {
     font-size: 3em;
     font-weight: 100;
     text-align: center;
     margin-top: 10px;
 }
 
-
-
-.show-date{
+.show-date {
     font-size: 2em;
     font-weight: 100;
     margin-bottom: 10px;
 }
-.show-time{
+
+.show-time {
     font-size: 1.25em;
-    font-weight:500;
+    font-weight: 500;
 }
 
-.show-venue{
-    font-size: 3em;
+.show-venue {
+    font-size: 2em;
     font-weight: 100;
     margin-bottom: 10px;
-    margin-top: 10px
+    margin-top: 25px;
+    line-height: 120%;
 }
 
-.card-content{
+.card-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
-.links{
+.card .card-content p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.links {
     margin-top: 1em;
     display: flex;
     justify-content: space-around;
@@ -215,7 +226,7 @@ CARD FORMATING
     }
 }
 
-.add-btn{
+.add-btn {
     text-decoration: none;
     color: $dark-grey;
     font-size: 1.25em;
@@ -223,17 +234,11 @@ CARD FORMATING
     margin-top: 0.75em;
 }
 
+
 /*************
 Dynamic Font
 *************/
-.above18{
+
+.above18 {
     font-size: 2em;
 }
-
-
-
-
-
-
-
-

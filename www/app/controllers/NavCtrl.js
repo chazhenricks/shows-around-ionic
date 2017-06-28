@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("NavCtrl", function($scope, $location, AuthFactory, DataFactory, LocationFactory, $timeout, $route, Spotify, $rootScope) {
+app.controller("NavCtrl", function($scope, $location, AuthFactory, DataFactory, LocationFactory, $timeout, $route, Spotify, $rootScope, $ionicModal) {
 
 
     //This determines if a user is logged in to trigger some ng-show elements in the navbar.html partial
@@ -9,6 +9,34 @@ app.controller("NavCtrl", function($scope, $location, AuthFactory, DataFactory, 
     $scope.newArtist = {
         name: ""
     };
+
+    $ionicModal.fromTemplateUrl('locationModal', {
+        scope: $scope,
+        animation: 'slide-in-up'
+      }).then(function(modal) {
+        $scope.modal = modal;
+      });
+      $scope.openModal = function() {
+        $scope.modal.show();
+      };
+      $scope.closeModal = function() {
+        $scope.modal.hide();
+      };
+      // Cleanup the modal when we're done with it!
+      $scope.$on('$destroy', function() {
+        $scope.modal.remove();
+      });
+      // Execute action on hide modal
+      $scope.$on('modal.hidden', function() {
+        // Execute action
+      });
+      // Execute action on remove modal
+      $scope.$on('modal.removed', function() {
+        // Execute action
+      });
+
+
+
 
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
@@ -49,7 +77,6 @@ app.controller("NavCtrl", function($scope, $location, AuthFactory, DataFactory, 
     // if user enters new city this will change the city to search by in the Location Factory
     $scope.newCity = function() {
         LocationFactory.newCity($scope.newLocation.city);
-        $("#locationModal").modal('close');
         $location.url('/showslist');
         $scope.newLocation.city = "";
     };
